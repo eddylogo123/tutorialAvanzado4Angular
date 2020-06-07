@@ -1,5 +1,3 @@
-<p>parques works!</p>
-
 
 <h2>{{nombre}}</h2>
 
@@ -12,3 +10,8 @@
     <span *ngIf="abierto != true">Cerrado</span>
   </li>
 </ol>
+
+
+<button (click)="emitirEvento($event)">
+  Mostrar en el padre
+</button>
