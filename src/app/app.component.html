@@ -1,8 +1,14 @@
 <h1>
   {{title}}
 </h1>
-
-<app-tienda></app-tienda>
+<!--<app-tienda></app-tienda>-->
+<a [routerLink]="'/home'">Home</a>
+<a [routerLink]="'/animals'">Animales</a>
+<a [routerLink]="'/keepers'">Cuidadores</a>
+<a [routerLink]="'/tienda'">Tienda</a>
+<a [routerLink]="'/contacts'">Contacto</a>
 <hr/>
+<router-outlet></router-outlet>
+
 
 
