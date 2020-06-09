@@ -6,7 +6,13 @@
 <a [routerLink]="'/animals'">Animales</a>
 <a [routerLink]="'/keepers'">Cuidadores</a>
 <a [routerLink]="'/tienda'">Tienda</a>
-<a [routerLink]="'/contacts'">Contacto</a>
+<a [routerLink]="'/contact'">Contacto</a>
+
+<span *ngIf="emailContacto">
+  <strong>Email de contacto:</strong>{{emailContacto}}
+  <button (click)="borrarEmail()">Eliminar email de contacto</button>
+</span>
+
 <hr/>
 <router-outlet></router-outlet>
 
