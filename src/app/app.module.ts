@@ -2,9 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+//Importar el modulo de rutas
+import { routing, appRoutingProviders } from './app.routing';
+
 import { AppComponent } from './app.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
 import { ParquesComponent } from './components/parques/parques.component';
+import { AnimalsComponent } from './components/animals/animals.component';
+import { HomeComponent } from './components/home/home.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { KeepersComponent } from './components/keepers/keepers.component';
 
 /**
  * Bloques
@@ -17,13 +24,20 @@ import { ParquesComponent } from './components/parques/parques.component';
   declarations: [
     AppComponent,
     TiendaComponent,
-    ParquesComponent
+    ParquesComponent,
+    AnimalsComponent,
+    HomeComponent,
+    ContactComponent,
+    KeepersComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
-  providers: [],
+  providers: [
+    appRoutingProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
