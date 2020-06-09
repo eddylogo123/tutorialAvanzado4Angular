@@ -1,12 +1,12 @@
 //importar modulos
-import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter, OnChanges, DoCheck, SimpleChanges, OnDestroy} from '@angular/core';
 
 @Component({
   selector: 'app-parques',
   templateUrl: './parques.component.html',
   styleUrls: ['./parques.component.css']
 })
-export class ParquesComponent implements OnInit {
+export class ParquesComponent implements OnInit, OnChanges, DoCheck, OnDestroy {
 
     //recibir desde un componente padre
     @Input() nombre: string;
@@ -27,8 +27,28 @@ export class ParquesComponent implements OnInit {
     this.abierto = true;
   }
 
+  ngOnDestroy(): void {
+        // throw new Error("Method not implemented.");
+        console.log('Se va eliminar el componente....');
+    }
+
+  ngDoCheck(): void {
+      console.log('El docheck se ha ejecutado');
+    }
+
+  /***
+   * Metodo que detecta algun cambio en la clase
+   *
+   */
+  ngOnChanges(changes: SimpleChanges): void {
+    // console.log(changes);
+    console.log("Existen cambios en las propiedades");
+    }
+
   ngOnInit(): void {
+    console.log('metodo on init cargado');
   }
+
 
   emitirEvento(event){
   this.pasameLosDatos.emit({
