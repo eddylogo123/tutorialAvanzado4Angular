@@ -1,20 +1,54 @@
-<h1>
-  {{title}}
-</h1>
-<!--<app-tienda></app-tienda>-->
-<a [routerLink]="'/home'">Home</a>
-<a [routerLink]="'/animals'">Animales</a>
-<a [routerLink]="'/keepers'">Cuidadores</a>
-<a [routerLink]="'/tienda'">Tienda</a>
-<a [routerLink]="'/contact'">Contacto</a>
+<div class="navigation col-lg-12">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+          <a [routerLink]="'/home'" class="navbar-brand">{{title}}</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li>
+            <a [routerLink]="'/home'" [routerLinkActive]="['active']">
+<!--              <span class="glyphicon glyphicon-home"></span>-->
+              Home
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="'/animals'" [routerLinkActive]="['active']">
+<!--              <span class="glyphicon glyphicon-star"></span>-->
+              Animales
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="'/keepers'" [routerLinkActive]="['active']">
+<!--              <span class="glyphicon glyphicon-user"></span>-->
+              Cuidadores
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="'/tienda'" [routerLinkActive]="['active']">
+<!--              <span class="glyphicon glyphicon-user"></span>-->
+              Tienda
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="'/contact'" [routerLinkActive]="['active']">
+              Contacto
+            </a>
+          </li>
+          <li class="hidden">
+            <span *ngIf="emailContacto">
+              <strong>Email de contacto:</strong>{{emailContacto}}
+                          <button (click)="borrarEmail()">Eliminar email de contacto</button>
+            </span>
+          </li>
+        </ul>
+    </div>
+  </nav>
+</div>
 
-<span *ngIf="emailContacto">
-  <strong>Email de contacto:</strong>{{emailContacto}}
-  <button (click)="borrarEmail()">Eliminar email de contacto</button>
-</span>
+<div class="col-lg-11">
+  <router-outlet></router-outlet>
+</div>
 
-<hr/>
-<router-outlet></router-outlet>
 
 
 
