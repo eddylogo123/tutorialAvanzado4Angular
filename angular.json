@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "curso-angular4-avanzado"
+    }
+  },
+  "defaultProject": "curso-angular4-avanzado",
+  "cli": {
+    "analytics": false
+  }
 }

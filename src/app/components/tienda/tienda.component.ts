@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+//incluir el simbolo $ de jquery
+declare var jQuery:any;
+declare var $:any;
+
 @Component({
   selector: 'app-tienda',
   templateUrl: './tienda.component.html',
@@ -21,6 +25,14 @@ export class TiendaComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    $('#textojq').hide();
+
+    $('#botonjq').click(function(){
+      console.log('click desde jquery');
+      $('#textojq').slideToggle();
+      });
+    $("#caja").dotdotdot();
   }
 
   mostrarNombre() {
