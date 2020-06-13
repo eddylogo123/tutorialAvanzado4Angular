@@ -5,6 +5,10 @@ import { FormsModule } from '@angular/forms';
 //Importar el modulo de rutas
 import { routing, appRoutingProviders } from './app.routing';
 
+//Importar nuestro nuevo modulo
+import { ModuloEmailModule } from './moduloemail/moduloemail.module';
+import { AdminModule } from './admin/admin.module';
+
 import { AppComponent } from './app.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
 import { ParquesComponent } from './components/parques/parques.component';
@@ -16,7 +20,7 @@ import { KeepersComponent } from './components/keepers/keepers.component';
 /**
  * Bloques
  * declarations: Declaracion de Componentes, directivas y pipes
- * imports: Declaracion de modulos, o componentes internos de Angular
+ * imports: Declaracion de nuevos modulos, o componentes internos de Angular
  * bootstrap: componente inicial
  * */
 
@@ -33,7 +37,9 @@ import { KeepersComponent } from './components/keepers/keepers.component';
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    ModuloEmailModule,
+    AdminModule
   ],
   providers: [
     appRoutingProviders
