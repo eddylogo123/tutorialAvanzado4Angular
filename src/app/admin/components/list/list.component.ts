@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  title: string = 'Listado'
+  title: string = 'Listado';
+
+  //numbers = [0 , 1, 2, 3, 4, 5];
+  numbers = new Array(10);
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,1 +1,35 @@
-<h3>{{title}}</h3>
+
+
+<div class="col-lg-12">
+  <h3>{{title}}</h3>
+  <table class="table table-hover">
+    <thead class="thead-default">
+      <tr>
+        <th>Nombre</th>
+        <th>Año</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of numbers; let i = index">
+        <td>Oso Panda {{ i+1 }}</td>
+        <td>2012</td>
+        <td>
+          <button class="btn btn-sm btn-success">
+            Ver
+          </button>
+          <button class="btn btn-sm btn-primary">
+            Editar
+          </button>
+          <button class="btn btn-sm btn-danger">
+            Borrar
+          </button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+

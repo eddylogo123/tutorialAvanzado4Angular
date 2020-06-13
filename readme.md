@@ -38,4 +38,6 @@ _Enumeraciones en lista_
 ## Modificaciones realizadas
 ### 09 de junio: Bootstrap y maquetación WEB
 ### 10 de junio: librerias externas
-### 11 de junio: Móodulo
+### 11 de junio: Módulo
+### 13 de junio: Módulo panel de Administración
+
